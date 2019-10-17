@@ -8,7 +8,7 @@ import 'views/profile/profile.dart';
 import 'views/subject/subject.dart';
 
 void main(){
-  runApp(MyApp())
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget{
@@ -39,7 +39,6 @@ class MyStackPageState extends State<MyStackPage>{
   final textStyle = TextStyle(fontSize: 20,color: Colors.red);
 
   var _currentIndex = 0;
-  var _counter = 0;
 
   @override
   Widget build(BuildContext context) {

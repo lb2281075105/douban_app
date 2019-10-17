@@ -7,7 +7,7 @@ class Profile extends StatelessWidget {
         title: Text("我的"),
       ),
       body: Center(
-        child: Text("我的"),
+        child: Text("我的d"),
       ),
     );
   }
