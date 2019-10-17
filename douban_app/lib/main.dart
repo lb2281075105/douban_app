@@ -1,6 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'components/tabbar_item.dart';
+import 'views/home/home.dart';
+import 'views/group/group.dart';
+import 'views/mall/mall.dart';
+import 'views/profile/profile.dart';
+import 'views/subject/subject.dart';
+
 void main(){
   runApp(MyApp())
 }
@@ -39,11 +45,16 @@ class MyStackPageState extends State<MyStackPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text("豆瓣App"),
-      ),
-      body: Center(
-        child: Text("JCSONd",style: textStyle,),
+
+      body: IndexedStack(
+        index: _currentIndex,
+        children: <Widget>[
+          Home(),
+          Subject(),
+          Group(),
+          Mall(),
+          Profile()
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
